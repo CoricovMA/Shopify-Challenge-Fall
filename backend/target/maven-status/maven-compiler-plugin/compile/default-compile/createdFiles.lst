@@ -1,0 +1,5 @@
+org/challenge/controllers/PingController.class
+org/challenge/App.class
+org/challenge/config/AppConfig.class
+org/challenge/controllers/PictureController.class
+org/challenge/repo/FileHandler.class
