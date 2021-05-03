@@ -1,6 +1,5 @@
 package org.challenge;
 
-import org.challenge.database.Database;
 import org.challenge.repo.FileHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +13,5 @@ public class App {
 
     public static void initServices(){
         FileHandler.init();
-        Database.init();
     }
 }

@@ -11,9 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Slf4j
 public class FileHandler {
@@ -51,11 +49,9 @@ public class FileHandler {
         String fileName = (getFileNames().contains(file.getName()))
                 ? file.getName() + "_" + UUID.randomUUID()
                 : file.getName();
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream(fileName);
+        try(FileOutputStream fileOutputStream = new FileOutputStream(fileName)) {
             fileOutputStream.write(FileUtils.readFileToByteArray(file));
             fileOutputStream.flush();
-            fileOutputStream.close();
         } catch (IOException e) {
             log.warn("Something went wrong while creating file. {}", e.getMessage());
         }
