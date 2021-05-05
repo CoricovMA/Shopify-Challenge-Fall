@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const mainUrl = "http://localhost:8080/";
+export const mainUrl = "http://localhost:8080";
 
-export function uploadImages(files){
+function uploadImages(files){
     let formData = new FormData();
 
     files.forEach(
@@ -11,7 +11,7 @@ export function uploadImages(files){
         }
     )
 
-    return axios.post(`${mainUrl}upload`, formData,
+    return axios.post(`${mainUrl}/upload`, formData,
         {
             headers: {
                 "Content-Type": "multipart/form-data; boundary=----------287032381234132612",
@@ -22,6 +22,16 @@ export function uploadImages(files){
 
 }
 
-export function deleteImage(){
-
+function deleteImage(filename){
+    return axios.delete(`${mainUrl}/picture/${filename}`);
 }
+
+function getImage(filename){
+    return axios.get(`${mainUrl}/picture/${filename}`);
+}
+
+function getAllImages(){
+    return axios.get(`${mainUrl}/pictures`);
+}
+
+export {uploadImages, deleteImage, getAllImages, getImage};
