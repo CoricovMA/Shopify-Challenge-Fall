@@ -66,30 +66,32 @@ function Picture(props){
 
 function PictureTable(){
     const [pictureElements, setPictureElements] = useState([]);
+    const [needsReset, setNeedsReset] = useState(true);
 
     const removePictureElement = (index) => {
         let arr = pictureElements;
         arr.splice(index, 1);
-        setPictureElements(arr);
+        setPictureElements([...arr]);
+        setNeedsReset(true)
     }
 
-
-    useEffect( () =>{
-        getAllImages().then( (res) =>{
-            if(res.status === 200){
+    if(needsReset) {
+        getAllImages().then((res) => {
+            if (res.status === 200) {
                 setPictureElements(res.data.pictures.map((item, index) => {
-                        return <Picture src={`${mainUrl}/picture/${item}`}
-                                        key={index+1}
-                                        index={index}
-                                        imageName={item}
-                                        removePIctureElement={removePictureElement}
-                        />
+                    return <Picture src={`${mainUrl}/picture/${item}`}
+                                    key={index + 1}
+                                    index={index}
+                                    imageName={item}
+                                    removePIctureElement={removePictureElement}
+                    />
                 }))
             }
-        }).catch( (err) => {
+        }).catch((err) => {
             // console.log(err)
         })
-    })
+        setNeedsReset(false)
+    }
 
     return (
         <Container style={{
