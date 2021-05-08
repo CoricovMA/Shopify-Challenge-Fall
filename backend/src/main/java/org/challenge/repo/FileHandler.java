@@ -41,6 +41,10 @@ public class FileHandler {
         return Arrays.asList(FOLDER.list());
     }
 
+    public static void setFolder(File folder){
+        FOLDER = folder;
+    }
+
     public static String getFileNamesJson(){
         return getFileNamesJson(getFileNames().size());
     }

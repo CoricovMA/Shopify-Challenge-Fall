@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="66f78962-55d9-431e-bc55-9ed2053c0712" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/backend/src/test/java/org/challenge/controllers/PictureControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/challenge/repo/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/challenge/repo/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Pages/Homepage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/Homepage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +46,7 @@
       <updated>1619819384629</updated>
       <workItem from="1619819385693" duration="619000" />
       <workItem from="1620502461293" duration="3943000" />
+      <workItem from="1620511692724" duration="599000" />
     </task>
     <servers />
   </component>
