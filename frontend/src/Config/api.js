@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const mainUrl = "http://localhost:8080";
+export const mainUrl = "https://shopify-chall-backend.herokuapp.com";
 const myHeaders = {
     "Content-Type": "multipart/form-data; boundary=----------287032381234132612",
     "Access-Control-Allow-Origin": "*"

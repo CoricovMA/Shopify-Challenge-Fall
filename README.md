@@ -28,3 +28,8 @@ To run using docker, execute the following commands in the root backend director
 3. ```docker run --name <container-name> -d -p 8080:8080 <image-tag> ``` where "container-name" is the desired container name
 
 This would result in the docker container running, barring any issues (existing containers with the same name, etc.) .
+
+
+### Live Version
+
+For a live version, please click [here](https://shopify-fall-challenge.herokuapp.com/gallery)
