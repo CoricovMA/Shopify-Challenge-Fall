@@ -42,15 +42,24 @@ public class FileHandler {
     }
 
     public static String getFileNamesJson(){
-        return new JSONObject().put("pictures", new JSONArray(getFileNames())).toString();
+        return getFileNamesJson(getFileNames().size());
     }
 
-    public static void uploadFile(File file){
-        String fileName = (getFileNames().contains(file.getName()))
-                ? file.getName() + "_" + UUID.randomUUID()
-                : file.getName();
-        try(FileOutputStream fileOutputStream = new FileOutputStream(fileName)) {
-            fileOutputStream.write(FileUtils.readFileToByteArray(file));
+    public static String getFileNamesJson(int range){
+        return new JSONObject().put("pictures", new JSONArray(getFileNames().subList(0, range))).toString();
+    }
+
+    public static void uploadFile(MultipartFile file){
+        String originalFilename = file.getOriginalFilename();
+        String type = (originalFilename.contains(".")) ? originalFilename.split("\\.")[1] : ".png";
+        String fileName = (originalFilename.contains(".")) ? originalFilename.split("\\.")[0] : originalFilename;
+
+        String fileNameToWrite = (getFileNames().contains(originalFilename))
+                ? String.format("%s_%s.%s", fileName, UUID.randomUUID(), type)
+                : originalFilename;
+
+        try(FileOutputStream fileOutputStream = new FileOutputStream(filePath(fileNameToWrite))) {
+            fileOutputStream.write(file.getBytes());
             fileOutputStream.flush();
         } catch (IOException e) {
             log.warn("Something went wrong while creating file. {}", e.getMessage());
@@ -72,17 +81,17 @@ public class FileHandler {
         return false;
     }
 
+    private static String filePath(String name){
+        return String.format("%s%s%s", FOLDER_NAME, File.separator, name);
+    }
+
     private static File retrieveFile(String name){
         return new File(Paths.get(String.format("%s%s%s", FOLDER_NAME, File.separator , name)).toString());
     }
 
     public static void uploadFiles(List<MultipartFile> files) {
         for(MultipartFile file : files){
-            try(FileOutputStream fos = new FileOutputStream(file.getName())){
-                fos.write(file.getBytes());
-            } catch (IOException e) {
-                log.error("Error uploading file {}.", file.getName());
-            }
+            uploadFile(file);
         }
     }
 }

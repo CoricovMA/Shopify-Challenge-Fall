@@ -1,0 +1,46 @@
+.drop-box{
+    width: 345px;
+    height: 180px;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#upload-button{
+    margin-top: 20px;
+    color: white ;
+    background-color: #81b29a;
+    border-color: #81b29a;
+    position: relative;
+    top: 0;
+    transition: top ease 1s;
+}
+
+#upload-button:hover{
+    background-color: #77a58f;
+}
+
+.input-button{
+    width: 80%;
+    margin: 10% 10% 8px;
+}
+
+.drop-text{
+    color: grey;
+}
+
+.file-display{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+.col-display{
+    border-radius: 5px;
+    height: 100px;
+    width: 80px;
+    margin-bottom: 10px;
+}

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66f78962-55d9-431e-bc55-9ed2053c0712" name="Default Changelist" comment="" />
+    <list default="true" id="66f78962-55d9-431e-bc55-9ed2053c0712" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/Build_tools/build_image.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Build_tools/run_container.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/run_local_instance.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/RepoNavbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/GalleryPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/Homepage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/UploadPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Router/Router.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/style/drop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/style/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/PictureTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PictureTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Config/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/style/picture.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/style/picture.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +33,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ruI82yIfM9L5LwNnDE2P1waiFL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -37,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619819384629</updated>
       <workItem from="1619819385693" duration="619000" />
+      <workItem from="1620502461293" duration="864000" />
     </task>
     <servers />
   </component>

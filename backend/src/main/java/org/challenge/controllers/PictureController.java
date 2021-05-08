@@ -27,6 +27,11 @@ public class PictureController {
                 .build();
     }
 
+    /**
+     *
+     * @return JSON object containing all pictures
+     */
+
     @GetMapping(value = "/pictures", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     @CrossOrigin(origins = "*")
@@ -34,8 +39,21 @@ public class PictureController {
         return FileHandler.getFileNamesJson();
     }
 
+    @GetMapping(value = "/pictures/{range}", produces = MediaType.TEXT_PLAIN_VALUE)
+    @ResponseBody
+    @CrossOrigin(origins = "*")
+    public String retrievePicturesFromRange(@PathVariable int range){
+
+        if(range < 0 || range > FileHandler.getFileNames().size()){
+            return FileHandler.getFileNamesJson();
+        }
+
+        return FileHandler.getFileNamesJson(range);
+    }
+
 
     @DeleteMapping(value = "/picture/{name}")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<Boolean> removePicture(@PathVariable String name){
         boolean deleted = FileHandler.removeFile(name);
 
