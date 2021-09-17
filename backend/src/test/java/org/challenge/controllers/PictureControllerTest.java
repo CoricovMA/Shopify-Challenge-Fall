@@ -1,49 +1,59 @@
-package com.example.testingweb;
+package org.challenge.controllers;
 
-import static org.hamcrest.Matchers.containsString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import org.challenge.controllers.PictureController;
-import org.challenge.controllers.PingController;
+import org.challenge.TestHelperClass;
 import org.challenge.repo.FileHandler;
-import org.junit.Before;
+import org.json.JSONObject;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.http.ResponseEntity;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.IOException;
 
 @AutoConfigureMockMvc
 @SpringBootTest(classes = {PictureController.class, PingController.class})
 public class PictureControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    private static final PictureController testController = new PictureController();
 
-    @Test
-    public void pingTest() throws Exception {
-        this.mockMvc.perform(get("/ping")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("pong")));
-    }
-
-
-    // Just check if we get pictures, even if the list is empty
-    @Test
-    public void getAllPicturesTest() throws Exception {
+    @BeforeEach
+    void setUp() {
         FileHandler.init();
-        this.mockMvc.perform(get("/pictures")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"pictures\":")));
     }
 
+    @Test
+    void handleUploadPicture() {
+        try {
+            assertEquals(ResponseEntity.ok().build(),testController.handleUploadPicture(TestHelperClass.oneElementFileList()));
+            assertTrue(FileHandler.getFileNames().contains("test.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    void retrievePictureNames() {
+        try {
+            JSONObject jsonObject = new JSONObject(testController.retrievePictureNames());
+            assertTrue(jsonObject.has("pictures"));
+            assertTrue(jsonObject.toString().contains("test.jpg"));
+        }catch (Exception e){
+            fail();
+        }
+    }
+
+    @Test
+    void retrievePicturesFromRange() {
+    }
+
+    @Test
+    void removePicture() {
+    }
+
+    @Test
+    void getPicture() {
+    }
 }

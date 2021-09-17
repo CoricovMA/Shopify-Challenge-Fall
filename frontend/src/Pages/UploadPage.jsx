@@ -46,8 +46,6 @@ function Drop() {
     const [fileDisplay, setFileDisplay] = useState([])
     const [files, setFiles] = useState([])
     const [toast, setToast] = useState(<></>);
-    let fileArr;
-    fileArr = [];
 
     const [count, setCount] = useState(0);
 
@@ -63,7 +61,7 @@ function Drop() {
                 setFileDisplay(fileDisplay => fileDisplay.concat(<ImageDisplay
                     file={file}
                     key={count}
-                    duration={fileArr.length*1000}
+                    duration={files.length*1000}
                 />))
                 files.push(file)
                 setFiles(files)
@@ -77,6 +75,7 @@ function Drop() {
     const reset = () =>{
         setFiles([])
         setFileDisplay([])
+        window.location.reload();
     }
 
     const onClickUpload = () =>{
@@ -85,8 +84,8 @@ function Drop() {
         }
         uploadImages(files)
             .then((res) =>{
-                reset()
                 alert(`Successfully uploaded ${fileDisplay.length} ${fileDisplay.length > 1 ? "pictures" : "picture"}`)
+                reset()
             }).catch((err) =>{
             console.log(err)
         })
@@ -94,8 +93,6 @@ function Drop() {
 
     return (
         <div
-            data-aos={"fade-down"}
-            data-aos-duration={"1500"}
             style={{
                 paddingTop: "2%"
             }}>

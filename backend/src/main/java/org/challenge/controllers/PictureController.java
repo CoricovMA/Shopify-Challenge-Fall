@@ -1,6 +1,7 @@
 package org.challenge.controllers;
 
 import lombok.extern.slf4j.Slf4j;
+import org.challenge.orchestration.RequestOrchestrator;
 import org.challenge.repo.FileHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -8,30 +9,28 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 @Slf4j
 @RestController
 public class PictureController {
 
-
     @PostMapping(value = "/upload")
     @ResponseBody
     @CrossOrigin(origins = "*")
     public ResponseEntity handleUploadPicture(List<MultipartFile> files){
-        FileHandler.uploadFiles(files);
-
-        return ResponseEntity
-                .ok()
-                .build();
+        try {
+            return RequestOrchestrator.uploadPicture(files).get();
+        } catch (InterruptedException | ExecutionException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
      *
      * @return JSON object containing all pictures
      */
-
     @GetMapping(value = "/pictures", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     @CrossOrigin(origins = "*")
@@ -66,18 +65,15 @@ public class PictureController {
 
     @GetMapping(value = "/picture/{name}", produces = MediaType.IMAGE_JPEG_VALUE)
     public ResponseEntity<byte []> getPicture(@PathVariable String name){
-        try{
+        try {
 
-            byte [] fileBytes = FileHandler.retrievePictureAsBytes(name);
+            return RequestOrchestrator.getPicture(name).get();
 
-            return ResponseEntity.ok(fileBytes);
-
-        } catch (IOException e) {
-
+        } catch (InterruptedException | ExecutionException e) {
             log.error("There was an issue retrieving {}", name);
 
             return ResponseEntity.notFound().build();
-
         }
+
     }
 }

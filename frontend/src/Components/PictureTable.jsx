@@ -27,7 +27,7 @@ function Picture(props){
         <Grid item md={6} xs={12} sm={8} lg={4} xl={4} className={"grid-item"} >
             <Paper variant={"outlined"} square>
                 <Grid container justify={"center"} className={"picture-container"}>
-                    <Image src={props.src} className={`picture`} onClick={handleShowModal}  />
+                    <Image src={props.thumbnailSrc} className={`picture`} onClick={handleShowModal}  />
                 </Grid>
             </Paper>
             <Modal show={show} onHide={handleCloseModal} backdrop={"static"} keyboard={false} onClick={handleCloseModal} >
@@ -79,12 +79,17 @@ function PictureTable(){
         getAllImages().then((res) => {
             if (res.status === 200) {
                 setPictureElements(res.data.pictures.map((item, index) => {
-                    return <Picture src={`${mainUrl}/picture/${item}`}
-                                    key={index + 1}
-                                    index={index}
-                                    imageName={item}
-                                    removePIctureElement={removePictureElement}
+                    if(!item.includes("-thumbnail")){
+                        let name = item.split(".")
+                        return <Picture src={`${mainUrl}/picture/${item}`}
+                                        thumbnailSrc={`${mainUrl}/picture/${name[0]}-thumbnail.${name[1]}`}
+                                        key={index + 1}
+                                        index={index}
+                                        imageName={item}
+                                        removePIctureElement={removePictureElement}
+
                     />
+                    }
                 }))
             }
         }).catch((err) => {
