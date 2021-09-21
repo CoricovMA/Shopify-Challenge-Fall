@@ -36,4 +36,4 @@ The buffering of requests allows the application to remain UP even under heavy t
 
 ### Live Version
 
-For a live version, click [here](https://shopify-fall-challenge.herokuapp.com/gallery)
+For a live version, click [here](https://shopify-winter-challenge.herokuapp.com/gallery)
