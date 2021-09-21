@@ -1,4 +1,4 @@
-# Shopify Challenge Fall Backend Internship
+# Shopify Challenge Winter Backend Internship
 The project is divided in two folders - Backend and frontend, indicating each part of it.
 
 Ideally, an image repository would be a CDN (content delivery/distribution network), which would be a dedicated data storage server.
@@ -23,13 +23,17 @@ The backend is a Java Spring application. It can be run from an IDE, with a java
 building the docker image using the provided dockerfile.
 
 To run using docker, execute the following commands in the root backend directory:
-1. ```mvn clean isntall```
+1. ```mvn clean install```
 2. ```docker build -t <image-tag> .``` where "image-tag" is the desired tag for this image
 3. ```docker run --name <container-name> -d -p 8080:8080 <image-tag> ``` where "container-name" is the desired container name
 
 This would result in the docker container running, barring any issues (existing containers with the same name, etc.) .
 
+I have also added a RequestOrchestrator, which serves requests by fetching a thread from a thread pool. This would limit
+the number of subsequent requests accepted by the application. 
+
+The buffering of requests allows the application to remain UP even under heavy traffic.
 
 ### Live Version
 
-For a live version, please click [here](https://shopify-fall-challenge.herokuapp.com/gallery)
+For a live version, click [here](https://shopify-fall-challenge.herokuapp.com/gallery)

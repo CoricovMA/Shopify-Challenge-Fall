@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="66f78962-55d9-431e-bc55-9ed2053c0712" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_01468dd7-ee4c-4084-820c-958bd3a59b36-thumbnail.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_07910f9a-64ca-4cb0-bfbe-65c9bafb0081-thumbnail.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_32d62191-58cf-460c-be1e-e7de31b53d17-thumbnail.jpg" beforeDir="false" />
@@ -20,6 +27,9 @@
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_cb3b2ff5-f11f-4a0f-a83d-0b6633c8e785.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_e9f98b0e-b90d-4573-8e9b-e702ff46feea-thumbnail.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_fbd7a501-58ed-4016-a07a-e80eba17c0da-thumbnail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/challenge/repo/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/challenge/repo/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/challenge/controllers/PictureControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/challenge/controllers/PictureControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/challenge/repo/FileHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/challenge/repo/FileHandlerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Components/PictureTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PictureTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Config/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Pages/Homepage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/Homepage.jsx" afterDir="false" />
@@ -31,7 +41,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ruI82yIfM9L5LwNnDE2P1waiFL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -65,6 +75,7 @@
       <workItem from="1620502461293" duration="3943000" />
       <workItem from="1620511692724" duration="600000" />
       <workItem from="1632187586936" duration="615000" />
+      <workItem from="1632192787804" duration="129000" />
     </task>
     <servers />
   </component>
