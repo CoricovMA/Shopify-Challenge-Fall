@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f78962-55d9-431e-bc55-9ed2053c0712" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.idea/encodings.xml" beforeDir="false" />
@@ -27,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_cb3b2ff5-f11f-4a0f-a83d-0b6633c8e785.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_e9f98b0e-b90d-4573-8e9b-e702ff46feea-thumbnail.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pictures/test_fbd7a501-58ed-4016-a07a-e80eba17c0da-thumbnail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/challenge/repo/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/challenge/repo/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/challenge/controllers/PictureControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/challenge/controllers/PictureControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/challenge/repo/FileHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/challenge/repo/FileHandlerTest.java" afterDir="false" />
@@ -75,7 +74,7 @@
       <workItem from="1620502461293" duration="3943000" />
       <workItem from="1620511692724" duration="600000" />
       <workItem from="1632187586936" duration="615000" />
-      <workItem from="1632192787804" duration="129000" />
+      <workItem from="1632192787804" duration="466000" />
     </task>
     <servers />
   </component>
